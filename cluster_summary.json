@@ -1,0 +1,172 @@
+{
+    "0": {
+        "topic_label": "Customer service hold times",
+        "count": 1014,
+        "sentiment_distribution": {
+            "Positive": 189,
+            "Negative": 252,
+            "Neutral": 573
+        },
+        "cluster_sentiment_score": -63,
+        "random_samples": [
+            "@AmericanAir Trying to get my flight changed through dallas. Calling your number just says thanks for calling and hangs up. Guess I am stuck",
+            "@USAirways I was on hold for 2 hours and still no answer. Is this really how you run your business? <URL>",
+            "@SouthwestAir 40 minutes still have not talked to one person shocking phone is going to died before I talk to anyone <URL>",
+            "@USAirways testing my patience this evening (or shall I say morning?). We waited an hour at the gate for you to find a gate agent. 130am",
+            "@AmericanAir You cannot even get someone on the phone. Great story for the media."
+        ]
+    },
+    "1": {
+        "topic_label": "Lost Baggage Issues",
+        "count": 760,
+        "sentiment_distribution": {
+            "Positive": 165,
+            "Negative": 178,
+            "Neutral": 417
+        },
+        "cluster_sentiment_score": -13,
+        "random_samples": [
+            "@JetBlue ...second incident of lost baggage. I sent you a DM. Thoughts?",
+            "@SouthwestAir I spoke to soon... My bag was lost.. :(",
+            "@united, American never had my bags apparently. United never switched them over. Had to go back to United Baggage Service.",
+            "@USAirways I left an item on plane BOS-PHL on Friday. I have called PHL US Airways # & left 6 msgs. No return call what to do at this point.",
+            "@united why would you overnight my bag Wed to an unknown location with a courier company you apparently cannot contact!"
+        ]
+    },
+    "2": {
+        "topic_label": "Customer Travel Issues",
+        "count": 996,
+        "sentiment_distribution": {
+            "Positive": 467,
+            "Negative": 157,
+            "Neutral": 372
+        },
+        "cluster_sentiment_score": 310,
+        "random_samples": [
+            "@JetBlue When I checked yesterday it looked like it did. Did something change?",
+            "@JetBlue glitches on website re: Flight Booking Problems travel & checking in. Nothing between you are site & the airport was communicated, it was a nightmare.",
+            "@JetBlue I cannot find a good photo of it... You got one? goodnight",
+            "@JetBlue totally would have.... but the outside view was even more camera ready haha EvenMoreSpace EvenMoreView <URL>",
+            "@JetBlue are we scheduled to depart as scheduled?"
+        ]
+    },
+    "3": {
+        "topic_label": "Air Travel Feedback",
+        "count": 2055,
+        "sentiment_distribution": {
+            "Positive": 749,
+            "Negative": 579,
+            "Neutral": 727
+        },
+        "cluster_sentiment_score": 170,
+        "random_samples": [
+            "@AmericanAir @user what a joke you can mail The receipt !! Yet. We cannot mail Them A payment and fly before hand right",
+            "@USAirways One of your workers was very rude with us. We can tell you in DM cuz it will not be any good publicity...",
+            "@AmericanAir they responded. I cannot respond to their response. Nor can I speak with someone. worstcustomerserviceever",
+            "@USAirways express my disappointment in your reservation department and the treatment of a Sailor dealing with a death in the family",
+            "@USAirways they call weather an act of God and refuse to help. I have my wife and 3 kids and they have no sympathy."
+        ]
+    },
+    "4": {
+        "topic_label": "Service Acknowledgment",
+        "count": 1486,
+        "sentiment_distribution": {
+            "Positive": 510,
+            "Negative": 255,
+            "Neutral": 721
+        },
+        "cluster_sentiment_score": 255,
+        "random_samples": [
+            "@united @user @user Next thing you know, United will believe they are above the DOT and take them to court. United is anti-consumer",
+            "@united as a million mile flier I am embarrassed to ask how long ago his launched?",
+            "@united thanks for updating me about the 1+ hour delay the exact second I got to ATL.",
+            "@united I am not sure it will have \"next time\"...",
+            "@united ...would be on the next flight to Hayden/steamboat"
+        ]
+    },
+    "5": {
+        "topic_label": "Social Media Replies",
+        "count": 764,
+        "sentiment_distribution": {
+            "Positive": 287,
+            "Negative": 62,
+            "Neutral": 415
+        },
+        "cluster_sentiment_score": 225,
+        "random_samples": [
+            "@JetBlue Complete waste of an entire day. Pathetic.",
+            "@JetBlue I do! The best airline wifi ever. Thank you!",
+            "@JetBlue Thank you!",
+            "LMAO YOU ALL @JetBlue: Our fleet's on fleek. <URL>",
+            "@JetBlue ..... No crew at our gate."
+        ]
+    },
+    "6": {
+        "topic_label": "Social Media Interactions",
+        "count": 2010,
+        "sentiment_distribution": {
+            "Positive": 789,
+            "Negative": 172,
+            "Neutral": 1049
+        },
+        "cluster_sentiment_score": 617,
+        "random_samples": [
+            "@USAirways getting sorted, thanks",
+            "@SouthwestAir can you help",
+            "@SouthwestAir Awesome. Thanks! You guys rock!",
+            "@USAirways thanks for nothing",
+            "@SouthwestAir is not being responding to the @user athletes. notcool Southwest"
+        ]
+    },
+    "7": {
+        "topic_label": "Air Travel Problems",
+        "count": 1404,
+        "sentiment_distribution": {
+            "Positive": 402,
+            "Negative": 348,
+            "Neutral": 654
+        },
+        "cluster_sentiment_score": 54,
+        "random_samples": [
+            "@united Is it customary to upgrade a flight attendant in uniform vs passengers? One is in 1B on flt 1020 now to IAH",
+            "@united ah, that would explain why crew did not seem particularly distressed when we pointed it out. It was a little startling at first.",
+            "@united 4595. We are now going back to the gate b/c of something overheating after sitting out here for 3+ hours.Love United but this stinks",
+            "@united is trying to strand us in Houston until tomorrow morning. pretty sure overFlight Booking Problems and maintenance are not our fault.",
+            "@united Thank you for a wonderful global first class flight on your 777 to FRA. Great service. (cont) <URL>"
+        ]
+    },
+    "8": {
+        "topic_label": "Managing Travel Reservations",
+        "count": 1365,
+        "sentiment_distribution": {
+            "Positive": 399,
+            "Negative": 237,
+            "Neutral": 729
+        },
+        "cluster_sentiment_score": 162,
+        "random_samples": [
+            "@USAirways want to bump up my seet to first class for two Cancelled Flightlations in 24hrs?? what a joke",
+            "@USAirways we cannot afford the international change fees to rebook our trip so we wanted to go home, turns out we cannot afford to go home.",
+            "@SouthwestAir SWA helps the hotel industry. I always book flights a day before I need to be somewhere as SWA consistent Cancelled Flights/delays.",
+            "@USAirways i got through and am able to switch my flight with no charge. Thank you",
+            "@USAirways platinum flyer bought tkt in AA. Also both accounts are linked. So WHY cannot I check in for flight tomorrow?"
+        ]
+    },
+    "9": {
+        "topic_label": "Flight disruptions",
+        "count": 2519,
+        "sentiment_distribution": {
+            "Positive": 607,
+            "Negative": 652,
+            "Neutral": 1260
+        },
+        "cluster_sentiment_score": -45,
+        "random_samples": [
+            "@AmericanAir delayed flight six hours. Missed international connection= extra night in a hotel and still have to pay for a 15lb surfboardbag",
+            "@united it was an international flight, and we did not get our new eta until we were in the air.",
+            "@USAirways Flight gets in 30 minutes early and all goodwill gone when bags are not here 45 minutes Late Flightr",
+            "@SouthwestAir Flight 4110 MCO to ISP delayed. Any details on why?",
+            "@USAirways thanks for taking my flight off the board AND NOT PROVIDING and updates about my flight which is 26 minutes Late Flight."
+        ]
+    }
+}
