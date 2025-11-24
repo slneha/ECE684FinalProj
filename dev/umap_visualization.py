@@ -174,8 +174,8 @@ def calculate_metrics(embeddings, cluster_labels, true_labels):
     return metrics
 
 
-def create_umap_visualization(df_merged, cluster_labels_dict, output_path):
-    """Create interactive Plotly visualization with UMAP coordinates."""
+def create_umap_visualization(df_merged, cluster_labels_dict, metrics, output_path):
+    """Create interactive Plotly visualization with UMAP coordinates and metrics."""
     print("\nCreating UMAP visualization...")
 
     # Prepare data for plotting
@@ -241,6 +241,32 @@ def create_umap_visualization(df_merged, cluster_labels_dict, output_path):
             )
         )
 
+    # Create metrics text for annotation
+    metrics_text = "<b>Cluster Quality Metrics</b><br>"
+    metrics_text += "-" * 30 + "<br>"
+
+    if metrics.get("silhouette_score") is not None:
+        metrics_text += (
+            f"Silhouette Score: <b>{metrics['silhouette_score']:.4f}</b><br>"
+        )
+        metrics_text += "<span style='font-size:10px;'>(higher is better, range: -1 to 1)</span><br>"
+
+    if metrics.get("davies_bouldin_index") is not None:
+        metrics_text += (
+            f"Davies-Bouldin Index: <b>{metrics['davies_bouldin_index']:.4f}</b><br>"
+        )
+        metrics_text += "<span style='font-size:10px;'>(lower is better)</span><br>"
+
+    if metrics.get("calinski_harabasz_score") is not None:
+        metrics_text += f"Calinski-Harabasz Score: <b>{metrics['calinski_harabasz_score']:.4f}</b><br>"
+        metrics_text += "<span style='font-size:10px;'>(higher is better)</span><br>"
+
+    if metrics.get("purity_score") is not None:
+        metrics_text += f"Purity Score: <b>{metrics['purity_score']:.4f}</b><br>"
+        metrics_text += (
+            "<span style='font-size:10px;'>(higher is better, range: 0 to 1)</span><br>"
+        )
+
     # Update layout
     fig.update_layout(
         title={
@@ -256,6 +282,24 @@ def create_umap_visualization(df_merged, cluster_labels_dict, output_path):
         hovermode="closest",
         legend=dict(yanchor="top", y=0.99, xanchor="left", x=1.01, font=dict(size=10)),
         template="plotly_white",
+        annotations=[
+            dict(
+                text=metrics_text,
+                xref="paper",
+                yref="paper",
+                x=0.02,
+                y=0.98,
+                xanchor="left",
+                yanchor="top",
+                showarrow=False,
+                align="left",
+                bgcolor="rgba(255, 255, 255, 0.9)",
+                bordercolor="rgba(0, 0, 0, 0.5)",
+                borderwidth=1,
+                borderpad=10,
+                font=dict(size=11, family="monospace"),
+            )
+        ],
     )
 
     # Save to HTML
@@ -326,7 +370,7 @@ def main():
 
     # Create visualization
     print("\n5. Creating interactive visualization...")
-    create_umap_visualization(df_merged, cluster_labels_dict, output_html_path)
+    create_umap_visualization(df_merged, cluster_labels_dict, metrics, output_html_path)
 
     print("\n" + "=" * 60)
     print("Process complete!")
