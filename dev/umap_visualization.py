@@ -1,8 +1,3 @@
-"""
-UMAP Interactive Visualization and Cluster Quality Evaluation
-Creates a 2D UMAP visualization of tweet clusters and evaluates cluster quality.
-"""
-
 import pandas as pd
 import json
 import numpy as np
