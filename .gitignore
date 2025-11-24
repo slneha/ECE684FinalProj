@@ -1,0 +1,15 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+tweet_embeddings.json
+
+# Env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
