@@ -1,6 +1,5 @@
 {
   "silhouette_score": 0.0469378904964637,
   "davies_bouldin_index": 3.4311988956437496,
-  "calinski_harabasz_score": 443.3284669903302,
-  "purity_score": 0.6659013427955194
+  "calinski_harabasz_score": 443.3284669903302
 }
