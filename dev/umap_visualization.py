@@ -96,40 +96,7 @@ def recreate_clusters(embeddings_df, n_components=10):
     return embeddings_df, X
 
 
-def calculate_purity(cluster_labels, true_labels):
-    """Calculate cluster purity score.
-
-    Purity = (1/N) * Σ(max_j |C_i ∩ L_j|)
-    where C_i are clusters and L_j are true label classes.
-    """
-    n_samples = len(cluster_labels)
-    clusters = np.unique(cluster_labels)
-    classes = np.unique(true_labels)
-
-    purity_sum = 0
-
-    for cluster_id in clusters:
-        # Get all samples in this cluster
-        cluster_mask = cluster_labels == cluster_id
-        cluster_samples = true_labels[cluster_mask]
-
-        if len(cluster_samples) == 0:
-            continue
-
-        # Count occurrences of each class in this cluster
-        class_counts = {}
-        for class_label in classes:
-            class_counts[class_label] = np.sum(cluster_samples == class_label)
-
-        # Find the most frequent class in this cluster
-        max_count = max(class_counts.values())
-        purity_sum += max_count
-
-    purity = purity_sum / n_samples
-    return purity
-
-
-def calculate_metrics(embeddings, cluster_labels, true_labels):
+def calculate_metrics(embeddings, cluster_labels):
     """Calculate all cluster quality metrics."""
     print("\nCalculating cluster quality metrics...")
 
@@ -161,15 +128,6 @@ def calculate_metrics(embeddings, cluster_labels, true_labels):
     except Exception as e:
         print(f"Error calculating Calinski-Harabasz Score: {e}")
         metrics["calinski_harabasz_score"] = None
-
-    # Purity Score (higher is better, range: 0 to 1)
-    try:
-        purity = calculate_purity(cluster_labels, true_labels)
-        metrics["purity_score"] = float(purity)
-        print(f"Purity Score: {purity:.4f} (higher is better, range: 0 to 1)")
-    except Exception as e:
-        print(f"Error calculating Purity Score: {e}")
-        metrics["purity_score"] = None
 
     return metrics
 
@@ -261,12 +219,6 @@ def create_umap_visualization(df_merged, cluster_labels_dict, metrics, output_pa
         metrics_text += f"Calinski-Harabasz Score: <b>{metrics['calinski_harabasz_score']:.4f}</b><br>"
         metrics_text += "<span style='font-size:10px;'>(higher is better)</span><br>"
 
-    if metrics.get("purity_score") is not None:
-        metrics_text += f"Purity Score: <b>{metrics['purity_score']:.4f}</b><br>"
-        metrics_text += (
-            "<span style='font-size:10px;'>(higher is better, range: 0 to 1)</span><br>"
-        )
-
     # Update layout
     fig.update_layout(
         title={
@@ -356,12 +308,7 @@ def main():
 
     # Calculate metrics
     print("\n4. Calculating cluster quality metrics...")
-    # Prepare true labels for purity (sentiment labels)
-    true_labels = df_merged["airline_sentiment"].values
-
-    metrics = calculate_metrics(
-        embeddings_array, df_merged["cluster_label"].values, true_labels
-    )
+    metrics = calculate_metrics(embeddings_array, df_merged["cluster_label"].values)
 
     # Save metrics
     with open(output_metrics_path, "w") as f:
